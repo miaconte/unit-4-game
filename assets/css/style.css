@@ -1,0 +1,57 @@
+#c {
+    text-align:center;
+}
+.header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px; 
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background-color:white;
+    margin: 30px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#box1 {
+    position: static;
+    float: left;                  
+    width: 200px;
+    height: 100px;
+    background-color: lightblue; 
+}
+
+#box2 {
+    position: static;
+    float: left;       
+    margin: auto;           
+    width: 200px;
+    height: 100px;
+    background-color:white;
+   
+}
+
+#box3 {
+    position: static;
+    float: right;                  
+    width: 200px;
+    height: 100px;
+    background-color:lightblue;
+}
+
+.clearfix {
+    overflow: auto;
+    border: solid black; 
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+}
+       
+.gem-image {
+    position: relative;
+    text-align: center; 
+}
