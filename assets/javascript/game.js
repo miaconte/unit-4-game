@@ -1,54 +1,56 @@
-var targetNumber = Math.floor(Math.random()*101) +1;
+var tNum = Math.floor(Math.random()*100) +1;
 var win = 0;
 var loss = 0;
-var button1 = Math.floor(Math.random() *11) +1;
-var button2 = Math.floor(Math.random() *11) +1;
-var button3 = Math.floor(Math.random() *11) +1;
-var button4 = Math.floor(Math.random() *11) +1;
+var button1 = Math.floor(Math.random() *15) +1;
+var button2 = Math.floor(Math.random() *2) +1;
+var button3 = Math.floor(Math.random() *10) +1;
+var button4 = Math.floor(Math.random() *3) +1;
 var userScore = 0;
 
-var images = ["/Users/coding/Documents/unit-4-game/assets/images/bluegem.jpg","/Users/coding/Documents/unit-4-game/assets/images/greengem.jpg", "/Users/coding/Documents/unit-4-game/assets/images/pinkgem.jpg", 
-"/Users/coding/Documents/unit-4-game/assets/images/yellowgem.jpg"];
-
 function myFunction() {
-   targetNumber =+ Math.floor(Math.random() *101) +1;
-   $("#targetNumber").html(targetNumber);
+   tNum =+ Math.floor(Math.random() *100) +1;
+   $("#tNum").html(tNum);
 
-
-
-$("#blue").on("click", function() {
-	alert( "Alert" );
-  	console.log("TEST")
-   userScore += blue;
-   $("#crystalValue").html(blue).hide();
-   $("#userScore").html("Total Score: " + userScore);
+$("#button-1").on("click", function() {
+      userScore += button1;
+      $("#crystalValue").html(button1).hide();
+      $("#userScore").html("Value: " + userScore);
 });
 
-$("#green").on("click", function() {
-   userScore += green;
-   $("#crystalValue").html(green).hide();
-   $("#totScore").html("#crystalValue" + green);
-   $("#userScore").html("Total Score: " + userScore);
+$("#button-2").on("click", function() {
+    userScore += button2;
+      $("#crystalValue").html(button2).hide();
+      $("#totScore").html("#crystalValue" + button2);
+      $("#userScore").html("Value: " + userScore);
 });
 
-$("#gems").on("click", function() {
-   userScore += button3;
-   $("#crystalValue").html(button3).hide();
-   $("#userScore").html("Total Score: " + userScore);
+$("#button-3").on("click", function() {
+      userScore += button3;
+      $("#crystalValue").html(button3).hide();
+      $("#userScore").html("Value: " + userScore);
 });
 
-$("#gems").on("click", function() {
-   userScore += button4;
-   $("#crystalValue").html(button4).hide();
-   $("#userScore").html("Total Score: " + userScore);
+$("#button-4").on("click", function() {
+      userScore += button4;
+      $("#crystalValue").html(button4).hide();
+      $("#userScore").html("Value: " + userScore);
 });
 
-if (userScore === targetNumber){
-   wins++;
-}
+   if (userScore === tNum) {
+      alert("You Won!"); 
+       win++;
+       $("#win").text("Win: " + win);
+       alert("You Won!");
+       userScore = 0;
+       myFunction();
+   }
 
-else {
-   loss++;
-}
-
+   else if (userScore > tNum)  {
+      alert("LOSER!");
+       loss++;
+       $("#loss").text("Loss: "  + loss);
+       alert("You Lose!");
+       userScore = 0;
+       myFunction();
+   }
 };

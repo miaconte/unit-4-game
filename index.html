@@ -8,53 +8,56 @@
     <!-- External Links -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!--  -->
 
     <title>Crystal Collector</title>
 </head>
 <body>
+    <body onload="myFunction()">
     <div id="c">
 <div class="header">
     <h1>Crystal Collector</h1>
 </div>
     <div class="container">
-        <p>At the start of the game, you will be given a random number. Each gem has a different value attached to it, once clicked<br />
-            the value of your box will grow. In order to win the game, you must match the number listed. Each time the page is refreshed,<br /> 
-            the gems value changes.<br /><br />Good luck!</p><br />
+        <p>At the start of the game, you will be given a random number in the center box. Each Gem has a different number value attached to it,<br /> 
+            once clicked the value of your number will grow. In order to win the game, you must match the initial number listed. Each time the<br />
+            page is refreshed, the Gems value changes.<br /><br />Good luck!</p><br />
 <div class="clearfix">
-                <div id="box1">number of goal</div>
-                <div id="box2">this is where the counter will go</div>
-                <div id="box3">wins and losses</div>
+                <div id="box1"><div id="userScore" class="row">
+                    <div id="totValue" class="row">
+                    <div class="col-md-5" id="crystalValue"></div>
+                    </div>
+                 </div></div>
+                <div id="box2">
+                    <span id="tNum"></span>
+                </div>
+                <div id="box3">
+                    <span id="win">Win:</span> 
+                    <br /><br />
+                    <span id="loss">Loss:</span>
+                </div></div>
 </div>
 </div>
 </div>
 <br />
 </div>
 <div class="gem-image">
-<div id="crystals" class="row">
-        <div class="col-md-12">
-            <button id="blue" class="btn btn-danger btn-choice"><img src="/Users/coding/Documents/unit-4-game/assets/images/bluegem.jpg" height="135px"></button>
-            <button id="green" class="btn btn-danger btn-choice"><img src="/Users/coding/Documents/unit-4-game/assets/images/greengem.jpg" height="135px"></button>
-            <button id="pink" class="btn btn-danger btn-choice"><img src="/Users/coding/Documents/unit-4-game/assets/images/pinkgem.jpg" height="135px"></button>
-            <button id="yellow" class="btn btn-danger btn-choice"><img src="/Users/coding/Documents/unit-4-game/assets/images/yellowgem.jpg" height="135px"></button>
+                <div id="crystals" class="row">
+                    <div class="col-md-12">
+                        <button id="button-1" class="btn btn-danger btn-choice"><img src="/Users/coding/Documents/unit-4-game/assets/images/bluegem.jpg" height="135px"></button>
+                        <button id="button-2" class="btn btn-danger btn-choice"><img src="/Users/coding/Documents/unit-4-game/assets/images/greengem.jpg" height="135px"></button>
+                        <button id="button-3" class="btn btn-danger btn-choice"><img src="/Users/coding/Documents/unit-4-game/assets/images/pinkgem.jpg" height="135px"></button>
+                        <button id="button-4" class="btn btn-danger btn-choice"><img src="/Users/coding/Documents/unit-4-game/assets/images/yellowgem.jpg" height="135px"></button>
+                </div>
         </div>
     </div>
 </div>
 </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/javascript/game.js"></script>
+</body>
 </html>
-
-
-
-
-<!-- <div class="gem-image">
-        <button class="gems" id="blue"><img src="/Users/coding/Documents/unit-4-game/assets/images/bluegem.jpg" height="135px"></button>
-        <button class="gems" id="green"><img src="/Users/coding/Documents/unit-4-game/assets/images/greengem.jpg" height="135px"></button>
-        <button class="gems" id="pink"><img src="/Users/coding/Documents/unit-4-game/assets/images/pinkgem.jpg" height="135px"></button>
-        <button class="gems" id="yellow"><img src="/Users/coding/Documents/unit-4-game/assets/images/yellowgem.jpg" height="135px"></button>
-</div> -->
