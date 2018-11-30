@@ -37,19 +37,17 @@ $("#button-4").on("click", function() {
 });
 
    if (userScore === tNum) {
-      alert("You Won!"); 
        win++;
        $("#win").text("Win: " + win);
-       alert("You Won!");
+       alert("WINNER!");
        userScore = 0;
        myFunction();
    }
 
    else if (userScore > tNum)  {
-      alert("LOSER!");
        loss++;
        $("#loss").text("Loss: "  + loss);
-       alert("You Lose!");
+       alert("LOSER!");
        userScore = 0;
        myFunction();
    }
